@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateUsers extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        //
+        Schema::create('users', function (Blueprint $table) {
+          $table->unsignedInteger('id', $autoincrement = true);
+          $table->string('name', 40);
+          $table->string('user', 20)->unique();
+          $table->string('email', 40)->unique();
+          $table->string('password', 64);
+          $table->unsignedInteger('type');
+          $table->timestamps();
+
+          // constraint
+          $table->foreign('type')->references('id')->on('types');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+        Schema::drop('users');
+    }
+}
