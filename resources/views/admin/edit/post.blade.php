@@ -49,7 +49,7 @@
 
         @if (Session::get('type') == 1)
           <div class="form-group">
-            <label for="closed">Categoria:</label>
+            <label for="closed">Status:</label>
             <select name="closed" class="form-control">
               <option value="0">Aberto</option>
               <option value="1">Fechado</option>
