@@ -6,8 +6,11 @@ Foi desenvolvido utilizando o framework Laravel 5.2 e banco de dados MariaDB 10.
 É necessário utiliza o composer para instalar os pacotes requeridos.
 
 ```
+composer install
 composer update
 ```
 
 Também existe o arquivo de [dump](https://github.com/XunilUFOP/ajudai/blob/master/sisajudai.sql) usado para os testes de implementação.
 Além disso, é recomendado utlizar a conexão com o usuário criado pelo dump.
+
+A documentação referente a implementação pode ser vista [aqui](https://github.com/XunilUFOP/Ajudai/blob/master/DocumentoFinal.pdf).
